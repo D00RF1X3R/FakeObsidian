@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getTheme } from '../shared/utils/themes'
 import Header from './Header'
 import RoutesManager from './Routes'

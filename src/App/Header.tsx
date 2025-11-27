@@ -1,5 +1,3 @@
-import { useContext } from "react"
-import { ThemeContext } from "../shared/utils/contexts"
 import LogosBar from "./LogosBar"
 import RightBar from "./RightBar"
 
@@ -14,7 +12,6 @@ interface PropsInterface {
  * @param params Смотреть в интерфейсе
  */
 function Header({isLogged, handleThemeChange}: PropsInterface){
-    let theme = useContext(ThemeContext)
 
 
     return (
