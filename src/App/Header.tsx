@@ -1,24 +1,38 @@
+import { useEffect, useState } from "react"
 import LogosBar from "./LogosBar"
 import RightBar from "./RightBar"
+import { getUsersAll } from "../shared/utils/api"
+
 
 interface PropsInterface {
-    isLogged: boolean
     handleThemeChange: Function
 
 }
 
 /**
- * Собственно хедер
+ * Собственно хедер, уменьшил его до 60 пикселей, так как он казался огромным.
  * @param params Смотреть в интерфейсе
  */
-function Header({isLogged, handleThemeChange}: PropsInterface){
+function Header({handleThemeChange}: PropsInterface){
+    let [PIZDA, setPIZDA] = useState(true)
+    useEffect(() => {
+        const test = async () => {
+            let aboba = await getUsersAll()
+            console.log(aboba)
+            setPIZDA(false)
+        }
+        if (PIZDA) {
+            test()
+        }
+
+    }, [])
 
 
     return (
-        <div className="bg-bgDarkD/70 backdrop-blur-xl w-full h-[100px] fixed flex justify-center">
+        <div className="bg-bgDarkD/70 backdrop-blur-xl w-full h-[60px] fixed flex justify-center">
             <div className="h-full w-[1440px] flex justify-between items-center ">
                 <LogosBar></LogosBar>
-                <RightBar isLogged={isLogged} handleThemeChange={handleThemeChange}></RightBar>
+                <RightBar handleThemeChange={handleThemeChange}></RightBar>
             </div>
         </div>
     )}
