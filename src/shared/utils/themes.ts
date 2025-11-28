@@ -10,4 +10,4 @@ export const getTheme = (): string | null  => localStorage.getItem(`THEME`)
  * @param theme тема, light или dark
  * @returns Ничего -_-
  */
-export const setTheme = (theme: string) => localStorage.setItem(`THEME`, theme)
+export const setTheme = (theme: string): void => localStorage.setItem(`THEME`, theme)

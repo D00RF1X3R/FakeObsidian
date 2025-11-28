@@ -22,7 +22,7 @@ function Button ({children = "Кнопочка", disabled = false, onClick = () 
         }
     }
     return (
-        <button className={"border-0 rounded-normal bg-primary cursor-pointer text-tLightD font-bold w-[150px] h-[60px]" + " " + className} onClick={handleClick}>
+        <button className={"border-0 text-button rounded-normal bg-primary cursor-pointer text-tLightD font-bold " + className} onClick={handleClick}>
             {children}
         </button>
     )

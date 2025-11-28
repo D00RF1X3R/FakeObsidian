@@ -7,8 +7,8 @@ import PathElement from "./PathElement"
 function LogosBar() {
     return (
         <div className="h-full ml-[25px] flex gap-[50px] items-center">   
-            <Bars3Icon className="w-75px h-[75px] stroke-tLightD fill-tLightD cursor-pointer" onClick={() => {console.log("sosal?")}}></Bars3Icon>
-            <CubeIcon className="w-[60px] h-[60px] stroke-tLightD fill-tLightD cursor-pointer" onClick={() => {console.log("sosal?")}}></CubeIcon>
+            <Bars3Icon className="w-[60px] h-[60px] stroke-tLightD fill-tLightD cursor-pointer" onClick={() => {console.log("sosal?")}}></Bars3Icon>
+            <CubeIcon className="w-[50px] h-[50px] stroke-tLightD fill-tLightD cursor-pointer" onClick={() => {console.log("sosal?")}}></CubeIcon>
             <PathElement></PathElement>
         </div>
     ) 
